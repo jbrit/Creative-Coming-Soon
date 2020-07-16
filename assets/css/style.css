@@ -81,6 +81,7 @@
 /* Fonts */
 .f-18 {
   font-size: 18px;
+  line-height: 21px;
 }
 .f-48 {
   font-size: 48px;
@@ -118,4 +119,41 @@
 /* Countdown section */
 .countdown-section {
   padding-top: 100px;
+}
+/* loading-js styling */
+.ldBar {
+  position: relative;
+  stroke-width: 2;
+}
+.ldBar.label-center > .ldBar-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: none;
+  /* text-shadow: 0 0 3px #fff; */
+}
+.ldBar.label-center > .my-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* text-shadow: 0 0 3px #fff; */
+}
+.ldBar-label:after {
+  content: "";
+  display: inline;
+}
+.ldBar.no-percent .ldBar-label:after {
+  content: "";
+}
+.ldBar path.mainline {
+  stroke-linecap: round;
+  stroke-width: 1;
 }

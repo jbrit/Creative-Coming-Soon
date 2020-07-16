@@ -97,11 +97,59 @@
             Countdown to <span class="text-second">release</span>
           </div>
           <div id="count">
-            <div class="d-flex justify-content-center f-48">
-              <div id="totalDays" class="px-3 text-center w-25 mx-auto"></div>
-              <div id="hours" class="px-3 text-center w-25 mx-auto"></div>
-              <div id="minutes" class="px-3 text-center w-25 mx-auto"></div>
-              <div id="seconds" class="px-3 text-center w-25 mx-auto"></div>
+            <div class="row f-48">
+              <div class="col-3">
+                <div
+                  id="totalDays"
+                  style="width: 100%; max-width: 220px; height: 220px;"
+                  data-value="0"
+                  data-preset="circle"
+                  class="ldBar label-center mx-auto"
+                ></div>
+              </div>
+              <div class="col-3">
+                <div
+                  id="hours"
+                  style="width: 100%; max-width: 220px; height: 220px;"
+                  data-value="0"
+                  data-preset="circle"
+                  class="ldBar label-center mx-auto"
+                ></div>
+              </div>
+              <div class="col-3">
+                <div
+                  id="minutes"
+                  style="width: 100%; max-width: 220px; height: 220px;"
+                  data-value="0"
+                  data-preset="circle"
+                  class="ldBar label-center mx-auto"
+                ></div>
+              </div>
+              <div class="col-3">
+                <div
+                  id="seconds"
+                  style="width: 100%; max-width: 220px; height: 220px;"
+                  data-value="0"
+                  data-preset="circle"
+                  class="ldBar label-center mx-auto"
+                ></div>
+              </div>
+              <!-- <div
+                id="totalDays"
+                class="px-3 text-center d-none w-25 mx-auto"
+              ></div>
+              <div
+                id="hours"
+                class="px-3 text-center d-none w-25 mx-auto"
+              ></div>
+              <div
+                id="minutes"
+                class="px-3 text-center d-none w-25 mx-auto"
+              ></div>
+              <div
+                id="seconds"
+                class="px-3 text-center d-none w-25 mx-auto"
+              ></div> -->
             </div>
           </div>
         </div>
@@ -126,7 +174,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/CSSRulePlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+    <script src="./assets/js/loading-bar.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
       $(function () {
