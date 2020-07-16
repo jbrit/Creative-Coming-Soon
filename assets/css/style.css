@@ -10,6 +10,13 @@
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
 }
+body[data-theme="dark"] {
+  background-color: #26292e;
+  color: #fff;
+}
+body[data-theme="dark"] path.baseline {
+  stroke: #303338;
+}
 /* Loader Style */
 .lds-ripple {
   display: inline-block;
