@@ -266,6 +266,15 @@ body[data-theme="dark"] .works-section {
 }
 #themeSwitcher {
   background-color: #fff;
+  height: 100px;
+  width: 100px;
+  transform-origin: left;
+  transform: translateY(10px) scale(0.4);
+  cursor: pointer;
+}
+#themeSwitcher img {
+  width: 50%;
+  object-fit: contain;
 }
 * {
   transition: background-color 0.5s ease;

@@ -55,8 +55,28 @@ const setOffSet = (element, fraction) => {
     return;
   }
 };
-const switcher = document.getElementById("themeSwitcher");
-switcher.addEventListener("click", () => {
+const toggleTheme = () => {
   document.querySelector("body").dataset.theme =
     document.querySelector("body").dataset.theme === "dark" ? "light" : "dark";
+};
+// var switcherTl = gsap.timeline({ defaults: { duration: 1, reversed: true } });
+// switcherTl
+//   .fromTo(
+//     ".loader",
+//     { translateX: "-100%" },
+//     { translateX: "0", duration: 0.6, onComplete: toggleTheme }
+//   )
+//   .fromTo(
+//     ".loader",
+//     { translateX: "0" },
+//     { translateX: "100%", duration: 0.6 }
+//   );
+const switcher = document.getElementById("themeSwitcher");
+
+switcher.addEventListener("click", () => {
+  // switcherTl.play();
+  // setTimeout(() => {
+  //   switcherTl.reverse();
+  // }, 600);
+  toggleTheme();
 });

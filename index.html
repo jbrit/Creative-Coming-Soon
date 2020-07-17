@@ -27,6 +27,7 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
@@ -295,12 +296,7 @@
       <div style="position: absolute; width: 100%;">
       <div class="container"> <div
         style="
-          
-          height: 100px;
-          width: 100px;
           border-radius: 50%;
-          
-          transform: translateY(20px);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16);
         "
         id="themeSwitcher"
@@ -313,7 +309,13 @@
       <section class="home-section">
         <div class="container">
           <div class="d-flex">
-            <div class="home-flex home-flex-text d-flex align-items-center">
+            <div 
+            data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+            class="home-flex home-flex-text d-flex align-items-center">
               <div class="hero-text-group">
                 <div
                   class="f-24 f-sm-30 f-md-36 f-lg-48 fw-700 mb-5 text-second"
@@ -357,7 +359,11 @@
                 </div>
               </div>
             </div>
-            <div class="d-none d-md-block home-flex home-flex-hero">
+            <div  data-aos="fade-down"
+            data-aos-delay="550"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true" class="d-none d-md-block home-flex home-flex-hero">
               <img class="img-contain" src="./assets/images/hero.png" alt="" />
             </div>
           </div>
@@ -413,7 +419,11 @@
       <section class="worried-section">
         <div class="container">
           <div class="d-flex mb-3">
-            <div class="d-none d-md-block home-flex home-flex-hero mr-4">
+            <div  data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true" class="d-none d-md-block home-flex home-flex-hero mr-4">
               <img
                 class="img-contain"
                 src="./assets/images/worriedscreen.png"
@@ -421,6 +431,11 @@
               />
             </div>
             <div
+            data-aos="fade-down"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
               class="home-flex home-flex-text d-flex align-items-center mr-0"
             >
               <div class="hero-text-group">
@@ -451,6 +466,11 @@
               class="col-12 col-md-4 d-flex mb-4 mb-md-0 justify-content-center"
             >
               <div
+              data-aos="fade-down"
+              data-aos-delay="250"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
                 class="works-card px-4 py-5 d-flex flex-column align-items-center text-center"
               >
                 <div
@@ -477,6 +497,11 @@
               class="col-12 col-md-4 d-flex mb-4 mb-md-0 justify-content-center"
             >
               <div
+              data-aos="fade-down"
+              data-aos-delay="350"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
                 class="works-card px-4 py-5 d-flex flex-column align-items-center text-center"
               >
                 <div
@@ -500,6 +525,11 @@
             </div>
             <div class="col-12 col-md-4 d-flex justify-content-center">
               <div
+              data-aos="fade-down"
+              data-aos-delay="450"
+              data-aos-duration="600"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
                 class="works-card px-4 py-5 d-flex flex-column align-items-center text-center"
               >
                 <div
@@ -616,25 +646,26 @@
     <script src="./assets/js/loading-bar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="./assets/js/email-capture.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js/gs.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
       $(function () {
-        var rule1 = CSSRulePlugin.getRule(".text-reveal-1:after");
-        var rule2 = CSSRulePlugin.getRule(".text-reveal-2:after");
-        var rule3 = CSSRulePlugin.getRule(".text-reveal-3:after");
+        // var rule1 = CSSRulePlugin.getRule(".text-reveal-1:after");
+        // var rule2 = CSSRulePlugin.getRule(".text-reveal-2:after");
+        // var rule3 = CSSRulePlugin.getRule(".text-reveal-3:after");
         var tl = gsap.timeline({ defaults: { duration: 1 } });
         tl.to(".lds-ripple", { opacity: 0, duration: 2, delay: 2 })
-          .to(".loader", { translateX: "-100%", duration: 1.6 }, "-=0.1")
-          .from(".text-up", {
-            duration: 1.8,
-            opacity: 0,
-            translateY: "-100%",
-          })
-          .from(".text-down", { duration: 2.8, translateY: "100%" }, "-=1.8")
-          .to(rule1, { duration: 1.8, cssRule: { scaleY: 0 } }, "-=2.8")
-          .to(rule2, { duration: 1.8, cssRule: { scaleY: 0 } }, "-=2.8")
-          .to(rule3, { duration: 1.8, cssRule: { scaleY: 0 } }, "-=2.8");
+          .fromTo(".loader", { translateX: "0"}, { translateX: "-100%", duration: 1.6, onComplete: ()=>{AOS.init()} }, "-=0.1");
+          // .from(".text-up", {
+          //   duration: 1.8,
+          //   opacity: 0,
+          //   translateY: "-100%",
+          // })
+          // .from(".text-down", { duration: 2.8, translateY: "100%" }, "-=1.8")
+          // .to(rule1, { duration: 1.8, cssRule: { scaleY: 0 } }, "-=2.8")
+          // .to(rule2, { duration: 1.8, cssRule: { scaleY: 0 } }, "-=2.8")
+          // .to(rule3, { duration: 1.8, cssRule: { scaleY: 0 } }, "-=2.8");
       });
     </script>
   </body>

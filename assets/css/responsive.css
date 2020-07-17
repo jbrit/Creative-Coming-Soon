@@ -3,6 +3,9 @@
     font-size: 30px;
     line-height: 35px;
   }
+  #themeSwitcher {
+    transform: translateY(10px) scale(0.5);
+  }
 }
 @media all and (min-width: 768px) {
   .home-flex-text {
@@ -23,6 +26,9 @@
   .flex-basis-sm.home-flex-text {
     flex-basis: 700px;
   }
+  #themeSwitcher {
+    transform: translateY(10px) scale(0.6);
+  }
 }
 @media all and (min-width: 992px) {
   .f-lg-18 {
@@ -36,5 +42,8 @@
   .f-lg-48 {
     font-size: 48px;
     line-height: 56px;
+  }
+  #themeSwitcher {
+    transform: translateY(10px) scale(0.8);
   }
 }
