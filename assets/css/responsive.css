@@ -20,7 +20,7 @@
     font-size: 36px;
     line-height: 42px;
   }
-  .flex-basis-md.home-flex-text {
+  .flex-basis-sm.home-flex-text {
     flex-basis: 700px;
   }
 }
