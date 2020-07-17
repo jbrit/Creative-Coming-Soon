@@ -30,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
-  <body data-theme="dark" class="text-center text-md-left">
+  <body data-theme="dark">
     <div
       style="
         position: fixed;
@@ -46,12 +46,238 @@
       </div>
     </div>
     <div
+      style="
+        min-height: 100vh;
+        background-color: transparent;
+        position: absolute;
+      "
+      class="screenshot-modal w-100 h-100"
+    >
+      <div style="min-height: 100%;" class="container-fluid">
+        <div style="position: fixed; z-index: 0;" class="w-100 row h-100">
+          <div style="transform: translateY(-100%);" class="col-3 slide"></div>
+          <div style="transform: translateY(-100%);" class="col-3 slide"></div>
+          <div style="transform: translateY(-100%);" class="col-3 slide"></div>
+          <div style="transform: translateY(-100%);" class="col-3 slide"></div>
+        </div>
+        <div
+          id="closeBtn"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(122, 122, 122, 0.1);
+            cursor: pointer;
+            position: fixed;
+            z-index: 2;
+            height: 50px;
+            width: 50px;
+            top: 0;
+            right: 0;
+          "
+        >
+          X
+        </div>
+        <div
+          style="
+            margin-left: -15px;
+            overflow-y: auto;
+            min-height: 100%;
+            z-index: 1;
+          "
+          class="modal-content position-absolute w-100 d-flex flex-column justify-content-center bg-transparent"
+        >
+          <div style="display: none;" class="tour-screen tour-screen-1">
+            <div class="container">
+              <div class="d-flex flex-column flex-md-row">
+                <div class="d-block home-flex home-flex-hero mr-0 mr-md-4">
+                  <img
+                    class="img-contain"
+                    src="./assets/images/Splash Screen.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="home-flex home-flex-text d-flex flex-column justify-content-center mr-0 flex-basis-sm"
+                >
+                  <div class="hero-text-group">
+                    <div class="f-24 f-sm-30 f-md-36 fw-700 mb-5">
+                      This is the first Screen that is shown after a successful
+                      lauching of the app
+                    </div>
+                  </div>
+                  <div class="f-lg-24">
+                    <button id="nextBtn1" class="btn align-self-end">
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: none;" class="tour-screen tour-screen-2">
+            <div class="container">
+              <div class="d-flex flex-column flex-md-row">
+                <div class="d-block home-flex home-flex-hero mr-0 mr-md-4">
+                  <img
+                    class="img-contain"
+                    src="./assets/images/Dashboard.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="home-flex home-flex-text d-flex flex-column justify-content-center mr-0 flex-basis-sm"
+                >
+                  <div class="hero-text-group">
+                    <div class="f-24 f-sm-30 f-md-36 fw-700 mb-5">
+                      The Dashboard page shows all the options this app has such
+                      as “Scan” “Discover”, “Settings”, “How it works”, etc.
+                    </div>
+                  </div>
+                  <div class="f-lg-24">
+                    <button id="prevBtn1" class="btn">
+                      Previous
+                    </button>
+                    <button id="nextBtn2" class="btn align-self-end">
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: none;" class="tour-screen tour-screen-3">
+            <div class="container">
+              <div class="d-flex flex-column flex-md-row">
+                <div class="d-block home-flex home-flex-hero mr-0 mr-md-4">
+                  <img
+                    class="img-contain"
+                    src="./assets/images/Scan.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="home-flex home-flex-text d-flex flex-column justify-content-center mr-0 flex-basis-sm"
+                >
+                  <div class="hero-text-group">
+                    <div class="f-24 f-sm-30 f-md-36 fw-700 mb-5">
+                      Once the “Scan” tab is clicked, this screen shows for the
+                      user to input the child’s details for records purposes as
+                      the diagnosis result can be saved/shared if desired.
+                    </div>
+                  </div>
+                  <div class="f-lg-24">
+                    <button id="prevBtn2" class="btn">
+                      Previous
+                    </button>
+                    <button id="nextBtn3" class="btn align-self-end">
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: none;" class="tour-screen tour-screen-4">
+            <div class="container">
+              <div class="d-flex flex-column flex-md-row">
+                <div class="d-block home-flex home-flex-hero mr-0 mr-md-4">
+                  <img
+                    class="img-contain"
+                    src="./assets/images/Upload Snap.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="home-flex home-flex-text d-flex flex-column justify-content-center mr-0 flex-basis-sm"
+                >
+                  <div class="hero-text-group">
+                    <div class="f-24 f-sm-30 f-md-36 fw-700 mb-5">
+                      After a saving the child’s info, the user then has to snap
+                      or upload the picture of the malnutritioned child.
+                    </div>
+                  </div>
+                  <div class="f-lg-24">
+                    <button id="prevBtn3" class="btn">
+                      Previous
+                    </button>
+                    <button id="nextBtn4" class="btn">
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: none;" class="tour-screen tour-screen-5">
+            <div class="container">
+              <div class="d-flex flex-column flex-md-row">
+                <div class="d-block home-flex home-flex-hero mr-0 mr-md-4">
+                  <img
+                    class="img-contain"
+                    src="./assets/images/Scanning.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="home-flex home-flex-text d-flex flex-column justify-content-center mr-0 flex-basis-sm"
+                >
+                  <div class="hero-text-group">
+                    <div class="f-24 f-sm-30 f-md-36 fw-700 mb-5">
+                      After a successful upload of the image the app then scans
+                      the
+                    </div>
+                  </div>
+                  <div class="f-lg-24">
+                    <button id="prevBtn4" class="btn">
+                      Previous
+                    </button>
+                    <button id="nextBtn5" class="btn">
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: none;" class="tour-screen tour-screen-6">
+            <div class="container">
+              <div class="d-flex flex-column flex-md-row">
+                <div class="d-block home-flex home-flex-hero mr-0 mr-md-4">
+                  <img
+                    class="img-contain"
+                    src="./assets/images/Result.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="home-flex home-flex-text d-flex flex-column justify-content-center mr-0 flex-basis-sm"
+                >
+                  <div class="hero-text-group">
+                    <div class="f-24 f-sm-30 f-md-36 fw-700 mb-5">
+                      This is the first Screen that is shown after a successful
+                      lauching of the app 6
+                    </div>
+                  </div>
+                  <div class="f-lg-24">
+                    <button id="prevBtn5" class="btn">
+                      Previous
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
       class="main-body"
       data-former-class=" d-flex flex-column justify-content-center"
       data-former-style="min-height: 100vh;"
       style="position: relative; z-index: 0;"
     >
-      <div class="iykee-group text-center d-none">
+      <!-- <div class="iykee-group text-center d-none">
         <div class="display-4 toext-reveal text-up">
           Waiting for <span class="">@Iykee</span>
         </div>
@@ -65,31 +291,46 @@
         <h4 class="text-reveal text-reveal-3 text-down">
           Iykee give me work ooo🥺😩🙏🏽
         </h4>
-      </div>
+      </div> -->
+      <!-- <div
+        style="
+          position: absolute;
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.1);
+          transform: translate('50% 50%');
+        "
+        class="d-flex align-items-center justify-content-center"
+      >
+        <img src="./assets/images/bright.svg" alt="" class="logo-dark" />
+      </div> -->
       <section class="home-section">
         <div class="container">
           <div class="d-flex">
             <div class="home-flex home-flex-text d-flex align-items-center">
               <div class="hero-text-group">
-                <div class="f-48 fw-700 mb-5 text-second">
+                <div
+                  class="f-24 f-sm-30 f-md-36 f-lg-48 fw-700 mb-5 text-second"
+                >
                   Nutri<span class="text-accent">-Fi</span>
                 </div>
-                <div class="f-48 fw-700 mb-4">
+                <div class="f-24 f-sm-30 f-md-36 f-lg-48 fw-700 mb-4">
                   Know your child’s Malnutrition status within seconds
                 </div>
-                <div class="f-24 mb-4">
+                <div class="f-lg-24 mb-4">
                   This app helps you know any child’s malnutrition status by
                   just taking or uploading the child’s image. This app also
                   tells the type of supplements the child needs.
                 </div>
-                <div class="f-18">
-                  <form class="form-inline">
+                <div class="f-lg-18">
+                  <form id="emailForm" class="form-inline">
                     <div class="form-group mb-2">
-                      <label for="inputEmail" class="sr-only">Email</label>
+                      <label for="emailInput" class="sr-only">Email</label>
                       <input
                         type="email"
-                        class="form-control border-0 rounded-0 px-3 py-2 f-18"
-                        id="inputEmail"
+                        class="form-control border-0 rounded-0 px-3 py-2 f-lg-18"
+                        id="emailInput"
                         placeholder="Your Email Address"
                         required
                       />
@@ -101,7 +342,7 @@
                       "
                       href="#"
                       type="submit"
-                      class="btn btn-primary text-uppercase border-0 px-4 py-2 form-control mb-2 f-18"
+                      class="btn text-uppercase border-0 px-4 py-2 form-control mb-2 f-lg-18"
                     >
                       Notify Me
                     </button>
@@ -117,11 +358,11 @@
       </section>
       <section class="countdown-section">
         <div class="container">
-          <div class="text-center f-48 fw-700 mb-5">
+          <div class="text-center f-24 f-sm-30 f-md-36 f-lg-48 fw-700 mb-5">
             Countdown to <span class="text-accent">release</span>
           </div>
           <div id="count" class="pb-4">
-            <div class="row f-48">
+            <div class="row f-24 f-sm-30 f-md-36 f-lg-48">
               <div class="col-3">
                 <div
                   id="totalDays"
@@ -176,12 +417,12 @@
               class="home-flex home-flex-text d-flex align-items-center mr-0"
             >
               <div class="hero-text-group">
-                <div class="f-48 fw-700 mb-5">
+                <div class="f-24 f-sm-30 f-md-36 f-lg-48 fw-700 mb-5">
                   Are you too worried about your child’s
                   <span class="text-accent">health status?</span>
                 </div>
 
-                <div class="f-24">
+                <div class="f-lg-24">
                   Worry no more! Nutrition-Fi is your solution. This app reduces
                   the stress you go through at the hospital or health center in
                   quest of your child’s status and also recommends the
@@ -195,7 +436,7 @@
       </section>
       <section class="works-section">
         <div class="container">
-          <div class="text-center f-48 fw-700 mb-5">
+          <div class="text-center f-24 f-sm-30 f-md-36 f-lg-48 fw-700 mb-5">
             How it <span class="text-accent">Works</span>
           </div>
           <div class="row pb-5">
@@ -207,11 +448,19 @@
               >
                 <div
                   class="works-icon-holder mb-3 d-flex align-items-center justify-content-center"
-                ></div>
-                <div class="works-head mb-3 text-accent fw-700 f-24">
+                >
+                  <img
+                    class="img-contain"
+                    style="width: 55px;"
+                    src="./assets/images/snap.svg"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <div class="works-head mb-3 text-accent fw-700 f-18 f-lg-24">
                   Snap/Upload
                 </div>
-                <div class="works-body f-18">
+                <div class="works-body f-lg-18">
                   The first step is to either snap the picture of the
                   malnutrition child or upload the image from your device
                 </div>
@@ -225,11 +474,18 @@
               >
                 <div
                   class="works-icon-holder mb-3 d-flex align-items-center justify-content-center"
-                ></div>
-                <div class="works-head mb-3 text-accent fw-700 f-24">
+                >
+                  <img
+                    class="img-contain"
+                    style="width: 55px;"
+                    src="./assets/images/scan.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="works-head mb-3 text-accent fw-700 f-18 f-lg-24">
                   Scanning Process
                 </div>
-                <div class="works-body f-18">
+                <div class="works-body f-lg-18">
                   After a successful upload of the image, this app scans the
                   image within 60 secs.
                 </div>
@@ -241,11 +497,18 @@
               >
                 <div
                   class="works-icon-holder mb-3 d-flex align-items-center justify-content-center"
-                ></div>
-                <div class="works-head mb-3 text-accent fw-700 f-24">
+                >
+                  <img
+                    class="img-contain"
+                    style="width: 55px;"
+                    src="./assets/images/carbon_report.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="works-head mb-3 text-accent fw-700 f-18 f-lg-24">
                   Diagnosis Report
                 </div>
-                <div class="works-body f-18">
+                <div class="works-body f-lg-18">
                   A detailed report that shows the malnutrition the child lacks
                   and supplements he/she needs
                 </div>
@@ -255,29 +518,71 @@
         </div>
       </section>
       <section class="screenshots-section">
-        <div class="container">
-          <div class="text-center f-48 fw-700 mb-5">
+        <div class="container text-center">
+          <div class="text-center f-24 f-sm-30 f-md-36 f-lg-48 fw-700 mb-5">
             App <span class="text-accent">Screenshots</span>
           </div>
-          <div class="row">
-            <div class="col-4">
-              <img class="img-contain" src="./assets/images/hero.png" alt="" />
+          <!-- <div class="row d-none">
+            <div class="col-4 d-flex justify-content-center">
+              <img
+                style="max-width: 335px;"
+                class="img-contain"
+                src="./assets/images/Splash Screen.png"
+                alt=""
+              />
             </div>
-            <div class="col-4">
-              <img class="img-contain" src="./assets/images/hero.png" alt="" />
+            <div class="col-4 d-flex justify-content-center">
+              <img
+                style="max-width: 335px;"
+                class="img-contain"
+                src="./assets/images/Dashboard.png"
+                alt=""
+              />
             </div>
-            <div class="col-4">
-              <img class="img-contain" src="./assets/images/hero.png" alt="" />
+            <div class="col-4 d-flex justify-content-center">
+              <img
+                style="max-width: 335px;"
+                class="img-contain"
+                src="./assets/images/Scan.png"
+                alt=""
+              />
             </div>
-            <div class="col-4">
-              <img class="img-contain" src="./assets/images/hero.png" alt="" />
+            <div class="col-4 d-flex justify-content-center">
+              <img
+                style="max-width: 335px;"
+                class="img-contain"
+                src="./assets/images/Upload Snap.png"
+                alt=""
+              />
             </div>
-            <div class="col-4">
-              <img class="img-contain" src="./assets/images/hero.png" alt="" />
+            <div class="col-4 d-flex justify-content-center">
+              <img
+                style="max-width: 335px;"
+                class="img-contain"
+                src="./assets/images/Scanning.png"
+                alt=""
+              />
             </div>
-            <div class="col-4">
-              <img class="img-contain" src="./assets/images/hero.png" alt="" />
+            <div class="col-4 d-flex justify-content-center">
+              <img
+                style="max-width: 335px;"
+                class="img-contain"
+                src="./assets/images/Result.png"
+                alt=""
+              />
             </div>
+          </div> -->
+          <div class="f-md-24 fw-700 mb-4">
+            Enough of all the long gist. This section gives you a quick tour of
+            the app! To begin, Click the button and see the wonders of Nutri-Fi
+            app
+          </div>
+          <div class="pb-5">
+            <a
+              class="btn text-uppercase fw-700 px-3 py-2"
+              href="javascript: animateTourTl.play()"
+              >Start Tour</a
+            >
           </div>
         </div>
       </section>
@@ -302,6 +607,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/CSSRulePlugin.min.js"></script>
     <script src="./assets/js/loading-bar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="./assets/js/email-capture.js"></script>
+    <script src="./assets/js/gs.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
       $(function () {

@@ -1,5 +1,40 @@
+@media all and (min-width: 576px) {
+  .f-sm-30 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
 @media all and (min-width: 768px) {
   .home-flex-text {
     margin-right: 100px;
+  }
+  .f-md-18 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .f-md-24 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .f-md-36 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .flex-basis-md.home-flex-text {
+    flex-basis: 700px;
+  }
+}
+@media all and (min-width: 992px) {
+  .f-lg-18 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .f-lg-24 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .f-lg-48 {
+    font-size: 48px;
+    line-height: 56px;
   }
 }

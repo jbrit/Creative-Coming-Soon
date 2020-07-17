@@ -14,6 +14,9 @@ body[data-theme="dark"] {
   background-color: #26292e;
   color: #fff;
 }
+body[data-theme="dark"] .slide {
+  background-color: black;
+}
 body[data-theme="dark"] path.baseline {
   stroke: #303338;
 }
@@ -116,10 +119,21 @@ body[data-theme="dark"] .works-section {
 .fw-700 {
   font-weight: 700;
 }
-
+.btn {
+  background-color: #6423b6;
+  color: #fff;
+  border-radius: 10px;
+}
 /* Home section */
 .home-section {
   padding-top: 100px;
+}
+.home-section::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 100%;
 }
 .home-flex {
   flex-grow: 1;
@@ -221,4 +235,13 @@ body[data-theme="dark"] .works-section {
 /* Screenshots section */
 .screenshots-section {
   padding-top: 100px;
+}
+.tour-screen .img-contain {
+  max-height: 640px;
+}
+.slide {
+  background-color: white;
+}
+.flex-basis-sm.home-flex-text {
+  flex-basis: auto;
 }

@@ -1,15 +1,15 @@
 $(function () {
   $("#totalDays.ldBar").append(
-    `<div class="my-label"><span class='f-18' >Days</span><div class="main-label"></div> </div>`
+    `<div class="my-label"><span class='d-none d-sm-block f-18' >Days</span><div class="main-label"></div> </div>`
   );
   $("#hours.ldBar").append(
-    `<div class="my-label"><span class='f-18' >Hours</span><div class="main-label"></div> </div>`
+    `<div class="my-label"><span class='d-none d-sm-block f-18' >Hours</span><div class="main-label"></div> </div>`
   );
   $("#minutes.ldBar").append(
-    `<div class="my-label"><span class='f-18' >Minutes</span><div class="main-label"></div> </div>`
+    `<div class="my-label"><span class='d-none d-sm-block f-18' >Minutes</span><div class="main-label"></div> </div>`
   );
   $("#seconds.ldBar").append(
-    `<div class="my-label"><span class='f-18' >Seconds</span><div class="main-label"></div> </div>`
+    `<div class="my-label"><span class='d-none d-sm-block f-18' >Seconds</span><div class="main-label"></div> </div>`
   );
 });
 var end = new Date("07/31/20");
