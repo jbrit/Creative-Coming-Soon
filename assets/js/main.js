@@ -55,3 +55,8 @@ const setOffSet = (element, fraction) => {
     return;
   }
 };
+const switcher = document.getElementById("themeSwitcher");
+switcher.addEventListener("click", () => {
+  document.querySelector("body").dataset.theme =
+    document.querySelector("body").dataset.theme === "dark" ? "light" : "dark";
+});
