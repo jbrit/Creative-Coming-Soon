@@ -12,7 +12,7 @@ $(function () {
     `<div class="my-label"><span class='d-none d-sm-block f-18' >Seconds</span><div class="main-label"></div> </div>`
   );
 });
-var end = new Date("08/31/20");
+var end = new Date("10/31/20");
 setInterval(function () {
   var now = Date.now();
   var delta = end.getTime() - now; // milliseconds elapsed since start
